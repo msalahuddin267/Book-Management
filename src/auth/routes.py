@@ -49,7 +49,7 @@ async def login_users(login_data: UserLoginModel, session: AsyncSession = Depend
                 user_data={
                     "email": user.email,
                     "user_uid": str(user.uid)
-                }
+                },
                 refresh=True,
                 expiry=timedelta(days=REFRESH_TOKEN_EXPIRY)
             )
